@@ -32,6 +32,7 @@ export class FuncionariosFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  
     this.especialidadeService.getEspecialidades()
     .subscribe( response => this.especialidades = response);
 
