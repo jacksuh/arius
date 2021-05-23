@@ -21,13 +21,13 @@ public class EspecialidadeService {
 
 
 
-    public List<EspecialidadeDto> getAll() {
+    public List<EspecialidadeDto> getTodos() {
         return repository.findAll().stream().map(EspecialidadeDto::create).collect(Collectors.toList());
     }
 
 
 
-    public Especialidade insert(EspecialidadeDto especialidadeDto){
+    public Especialidade salvarEspecialidade(EspecialidadeDto especialidadeDto){
         Especialidade esp = new Especialidade();
         esp.setDescricao(especialidadeDto.getDescricao());
 
@@ -35,12 +35,12 @@ public class EspecialidadeService {
     }
 
 
-    public Optional<EspecialidadeDto> getTecnicoById(Long id) {
+    public Optional<EspecialidadeDto> getEspecialidadeById(Long id) {
         return repository.findById(id).map(EspecialidadeDto::create);
     }
 
 
-    public Especialidade update(EspecialidadeDto especialidadeDto, Long id) {
+    public Especialidade atualizarEspecialidade(EspecialidadeDto especialidadeDto, Long id) {
         Optional<Especialidade> optional = repository.findById(id);
         if (optional.isPresent()) {
             Especialidade db = optional.get();
@@ -56,7 +56,7 @@ public class EspecialidadeService {
     }
 
 
-    public void delete(Long id){
+    public void deletarEspecialidade(Long id){
         Optional<Especialidade> funcionario = repository.findById(id);
         if(funcionario.isPresent()){
             repository.deleteById(id);

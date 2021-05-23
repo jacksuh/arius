@@ -26,20 +26,20 @@ public class EspecialidadeController {
 
     @GetMapping
     public ResponseEntity<List<EspecialidadeDto>>obterTodos(){
-        List<EspecialidadeDto> tecnico = service.getAll();
+        List<EspecialidadeDto> tecnico = service.getTodos();
         return ResponseEntity.ok(tecnico);
     }
 
     @PostMapping
     public ResponseEntity<EspecialidadeDto> salvarEspecialidade(@RequestBody EspecialidadeDto especialidadeDto){
-        Especialidade esp = service.insert(especialidadeDto);
+        Especialidade esp = service.salvarEspecialidade(especialidadeDto);
         return ResponseEntity.ok(especialidadeDto.create(esp));
     }
 
 
     @GetMapping("/{id}")
     public ResponseEntity buscarPorID(@PathVariable("id") Long id){
-        Optional<EspecialidadeDto> tecnico = service.getTecnicoById(id);
+        Optional<EspecialidadeDto> tecnico = service.getEspecialidadeById(id);
         return ResponseEntity.ok(tecnico);
     }
 
@@ -49,7 +49,7 @@ public class EspecialidadeController {
 
         especialidadeDto.setId(id);
 
-        Especialidade f = service.update(especialidadeDto,id);
+        Especialidade f = service.atualizarEspecialidade(especialidadeDto,id);
 
         return f != null?
                 ResponseEntity.ok(f) : ResponseEntity.notFound().build();
@@ -57,7 +57,7 @@ public class EspecialidadeController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity deletar(@PathVariable("id") Long id){
-        service.delete(id);
+        service.deletarEspecialidade(id);
 
         return ResponseEntity.ok().build();
     }
