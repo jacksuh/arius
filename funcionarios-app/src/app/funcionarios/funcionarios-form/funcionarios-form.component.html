@@ -1,0 +1,64 @@
+<h1 class="mt-4">Funcionarios</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">{{funcionario.id ? 'Edição' : 'Cadastro'}}</li>
+</ol>
+<div class="container">
+    <form #FuncionarioForm="ngForm" (ngSubmit)="onSubmit()" >
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert akert-sucess" role="alert" *ngIf="sucess == true">
+                    Funcionario Salvo/Atualizado com Sucesso!
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>ID:</label>
+                    <input type="text" [ngModel]="funcionario.id" name="id" class="form-control" disabled="true" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" [(ngModel)]="funcionario.nome"
+                     name="nome"/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Descrição:</label>
+                    <select class="form-control" 
+                        [ngModelOptions]="{standalone: true}"
+                        [(ngModel)]="funcionario.especialidadeDto">
+                        <option value="">Selecione</option>
+                        <option *ngFor="let especialidade of especialidades" [ngValue]="especialidade.id">
+                            {{ especialidade.descricao }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-sucess" *ngIf="!funcionario.id">
+                    <i class="fa fa-save"></i> Salvar
+                </button>
+
+                <button type="submit" class="btn btn-primary" *ngIf="funcionario.id">
+                    <i class="fa fa-sync-alt"></i> Atualizar
+                </button>
+                 
+                <button type="button" class="btn btn-danger ml-1" (click)="voltarPListagem()">
+                    <i class="fa fa-arrow-alt-circle-left"></i> Voltar
+                </button>
+            </div>
+            
+        </div>
+    </form>
+</div>
