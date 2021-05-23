@@ -29,7 +29,9 @@
                     <tr>
                         <th>ID</th>
                         <th>Nome:</th>
-                        <th>Descrição</th>
+                        <th>Especialidade:</th>
+                        <th>Telefone:</th>
+                        <th>Email:</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +39,8 @@
                         <td>{{ funcionario.id }}</td>
                         <td>{{ funcionario.nome }}</td>
                         <td>{{ funcionario.especialidadeDto.descricao }}</td>
+                        <td>{{ funcionario.telefone }}</td>
+                        <td>{{ funcionario.email}}</td>
                         <button class="btn btn-primary" routerLink="/funcionarios-form/{{funcionario.id}}">
                             <i class="fa fa-edit"></i>
                         </button>

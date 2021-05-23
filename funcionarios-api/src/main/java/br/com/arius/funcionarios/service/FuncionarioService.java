@@ -41,6 +41,8 @@ public class FuncionarioService {
 
         Funcionario funcionario = new Funcionario();
         funcionario.setNome(dto.getNome());
+        funcionario.setTelefone(dto.getTelefone());
+        funcionario.setEmail(dto.getEmail());
         funcionario.setEspecialidade(especialidade);
 
         return repository.save(funcionario);
