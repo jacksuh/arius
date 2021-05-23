@@ -14,7 +14,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Modelo para tratamento de dados e persistencia para o modelo Funcionario (regra de negocio).
+ * Classe para tratamento de dados e persistencia para o modelo Funcionario (regras de negocio).
  * Autor: Jackson Santos
  */
 

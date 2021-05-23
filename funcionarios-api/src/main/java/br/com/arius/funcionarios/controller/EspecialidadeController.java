@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Classe responsavel por disponibilizar informações e requisição com os metodos Salvar/Atualizar/Deletar/pesquisar por Id para Especialidade.
+ * Classe responsavel pelas requisições com os metodos Salvar/Atualizar/Deletar/pesquisar por Id para Especialidade.
  * Autor: Jackson Santos
  *
  */

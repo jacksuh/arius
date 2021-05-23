@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
- * Modelo para tratamento de dados e persistencia para o modelo Especialidade (regra de negocio).
+ * Classe para tratamento de dados e persistencia para o modelo Especialidade (regras de negocio).
  * Autor: Jackson Santos
  */
 

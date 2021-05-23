@@ -3,7 +3,7 @@ import javax.persistence.*;
 
 /**
  *
- * Classe para declaração de dados e persistencia com o banco de dados, sera criado a tabela especialidades no banco de dados.
+ * Classe para declaração de dados e persistencia com o banco de dados, sera criado a tabela especialidades.
  *
  * Autor: Jackson Santos
  */

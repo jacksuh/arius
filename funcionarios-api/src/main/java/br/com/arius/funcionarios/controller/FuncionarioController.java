@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Classe responsavel para tratamento do front-end  com os metodos Salvar/Atualizar/Deletar/pesquisar por Id para Funcionario.
+ * Classe responsavel pelas requisições com os metodos Salvar/Atualizar/Deletar/pesquisar por Id para Funcionario.
  * Autor: Jackson Santos
  *
  */

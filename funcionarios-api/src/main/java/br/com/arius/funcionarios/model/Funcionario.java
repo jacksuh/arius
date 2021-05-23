@@ -2,8 +2,8 @@ package br.com.arius.funcionarios.model;
 import javax.persistence.*;
 
 /**
- * Classe para declaração de dados e persistencia com o banco de dados, sera criado a tabela tecnicos no banco de dados.
- * Tratamento de cardinalidade N-1, relacionamento (especialidade).
+ * Classe para declaração de dados e persistencia com o banco de dados, sera criado a tabela tecnicos.
+ * Tratamento de cardinalidade N-1.
  *
  * Autor: Jackson Santos
  */
