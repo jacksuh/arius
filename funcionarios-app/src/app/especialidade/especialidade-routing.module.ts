@@ -6,7 +6,8 @@ import { EspecialidadeListaComponent } from './especialidade-lista/especialidade
 
 const routes: Routes = [
   {path: 'especialidade-form', component: EspecialidadeFormComponent},
-  {path: 'especialidade-listagem', component: EspecialidadeListaComponent}
+  { path: 'especialidade-form/:id', component: EspecialidadeFormComponent },
+  {path: 'especialidade-lista', component: EspecialidadeListaComponent}
 ];
 
 @NgModule({

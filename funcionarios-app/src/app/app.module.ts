@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { TemplateModule } from './template/template.module';
 import { HomeComponent } from './home/home.component';
 import { FuncionariosModule } from './funcionarios/funcionarios.module';
-import { FuncionariosService } from './funcionarios.service'
+import { FuncionariosService } from './funcionarios.service';
+import { EspecialidadeService } from './especialidade.service';
 import { EspecialidadeModule } from './especialidade/especialidade.module'
 
 @NgModule({
@@ -25,7 +26,8 @@ import { EspecialidadeModule } from './especialidade/especialidade.module'
     EspecialidadeModule
   ],
   providers: [
-    FuncionariosService
+    FuncionariosService,
+    EspecialidadeService
   ],
   bootstrap: [AppComponent]
 })

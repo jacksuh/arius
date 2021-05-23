@@ -25,7 +25,7 @@ export class FuncionariosFormComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private especialidadeService: EspecialidadeService) { 
     this.funcionario = new Funcionario();
-  }
+   }
 
   voltarPListagem(){
     this.router.navigate(['/funcionarios-lista']);
@@ -45,6 +45,7 @@ export class FuncionariosFormComponent implements OnInit {
     )
    })
   }
+
 
   onSubmit(){
     if(this.id){
