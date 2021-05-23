@@ -56,12 +56,13 @@ export class FuncionariosFormComponent implements OnInit {
         this.errors = ['Erro ao atualizar o Cliente']
       })
 
-    }else{}
+    }else{
     this.service.salvar(this.funcionario)
     .subscribe(response =>{
       this.sucess = true;
       this.funcionario = response;
     })
+  }
   }
 }
 
