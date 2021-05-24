@@ -24,12 +24,12 @@ class FuncionariosApplicationTests {
 
 
 
-	//Lista retorno esperado 4 registros OK.
+	//Lista retorno esperado 1 registros OK.
 	@Test
 	public void testListarFuncionario() {
 		List<FuncionarioDto> funcionarioDto = funcionarioService.getTodos();
 
-		Assert.assertEquals(4, funcionarioDto.size());
+		Assert.assertEquals(1, funcionarioDto.size());
 	}
 
 
@@ -53,7 +53,7 @@ class FuncionariosApplicationTests {
 	public void testListarEspecialidade() {
 		List<EspecialidadeDto> especialidadeDto = especialidadeService.getTodos();
 
-		Assert.assertEquals(2, especialidadeDto.size());
+		Assert.assertEquals(1, especialidadeDto.size());
 	}
 
 
