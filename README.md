@@ -1,6 +1,6 @@
 # Desafio
 
-## Como executar projeto funcionarios-api
+## Como executar o projeto funcionarios-api
 Clone os Projetos para um diretorio qualquer em seu computador.
 
 ```bash

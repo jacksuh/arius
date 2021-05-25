@@ -32,6 +32,7 @@ public class EspecialidadeService {
         esp.setDescricao(especialidadeDto.getDescricao());
 
         return repository.save(esp);
+
     }
 
 
