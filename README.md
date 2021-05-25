@@ -68,4 +68,4 @@ Execute `ng serve` após subir o projeto acesse : `http://localhost:4200/`
 
 
     ## Testes Unitario<p>
-    - Testes realizados utilizando o Junit-4.
+    - Testes realizados utilizando o Junit-5.
